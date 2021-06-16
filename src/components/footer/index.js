@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Wrapper, Group, InnerGroup, Info, Text } from './styles/footer';
+import { Container, OuterWrapper, Wrapper, Group, InnerGroup, Info, Text,Logo,WordLogo,LogoGroup } from './styles/footer';
 
 export default function Footer({children,...restProps}){
     return(
@@ -7,6 +7,22 @@ export default function Footer({children,...restProps}){
             {children}
         </Container>
     )
+}
+
+Footer.Logo = function FooterLogo({children, ...restProps}){
+    return<Logo {...restProps}/>
+}
+
+Footer.WordLogo = function FooterWordLogo({children, ...restProps}){
+    return<WordLogo {...restProps}/>
+}
+
+Footer.LogoGroup = function FooterLogoGroup({children, ...restProps}){
+    return<LogoGroup {...restProps}>{children}</LogoGroup>
+}
+
+Footer.OuterWrapper = function FooterOuterWrapper({children, ...restProps}){
+    return<OuterWrapper {...restProps}>{children}</OuterWrapper>
 }
 
 Footer.Wrapper = function FooterWrapper({children, ...restProps}){
