@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "Watch on Any Devices",
-      "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
+      "subTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "image": "/images/misc/phone.png",
       "alt": "Tiger King on Netflix",
       "direction": "row-reverse"
@@ -10,16 +10,16 @@
     {
       "id": 2,
       "title": "Make your Own Playlist",
-      "subTitle": "Save your data and watch all your favourites offline.",
-      "image": "/images/misc/stack.png",
+      "subTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "/images/misc/tv.png",
       "alt": "Watch on mobile",
       "direction": "row"
     },
     {
       "id": 3,
       "title": "Watch in Ultra HD",
-      "subTitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
-      "image": "/images/misc/tv.png",
+      "subTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "/images/misc/stack.png",
       "alt": "Money Heist on Netflix",
       "direction": "row-reverse"
     }
