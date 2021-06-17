@@ -1,5 +1,8 @@
 import React, {useState,useContext,createContext} from 'react'
 import {Container, Frame, Title, Item, Inner, Header, Body} from './styles/accordian'
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import CancelIcon from '@material-ui/icons/Cancel';
+
 
 const ToggleContext = createContext();
 export default function Accordion({children, ...restProps}){
@@ -27,7 +30,11 @@ Accordion.Item = function AccordionItem({children, ...restProps}){
 
 Accordion.Header = function AccordionHeader({children, ...restProps}){
     const {toggleShow, setToggleShow} = useContext(ToggleContext);
-    return <Header onClick={() => setToggleShow((toggleshow => !toggleShow))} {...restProps}>{children}</Header>
+    return <Header onClick={() => setToggleShow((toggleshow => !toggleShow))} {...restProps}>
+    {children}
+    {toggleShow ? (<CancelIcon/>)
+                : (<AddCircleIcon/>)}
+    </Header>
 }
 
 Accordion.Body = function AccordionBody({children, ...restProps}){
