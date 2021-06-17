@@ -5,7 +5,7 @@ export const Container = styled.div`
     margin:180px auto;
 
     @media (max-width:600px){
-        width:500px;
+        width:400px;
         display:flex;
         flex-direction: column;
     }
@@ -30,7 +30,7 @@ export const Input = styled.input`
     padding:5px 12px;
 
     @media (max-width:600px){
-       width:400px;
+       width:300px;
        margin:20px auto;
     }
     
@@ -45,7 +45,7 @@ export const Button = styled.button`
     cursor: pointer;
 
     @media (max-width:600px){
-        width:400px;
+        width:300px;
        margin:0 auto;
     }
 `

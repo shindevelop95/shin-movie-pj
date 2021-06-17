@@ -1,7 +1,11 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
-     margin:50px 0;
+     margin:50px auto;
+     width:85%;
+     @media(max-width:600px){
+       min-width:400px;
+    }
 `;
 
 export const Group = styled.div`

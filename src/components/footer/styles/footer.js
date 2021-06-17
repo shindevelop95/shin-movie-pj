@@ -4,6 +4,9 @@ export const Container = styled.div`
     background-color: #000000;
     width:100%;
     padding:125px 0;
+    @media(max-width:600px){
+        min-width:400px;
+    }
 `;
 
 export const OuterWrapper = styled.div`

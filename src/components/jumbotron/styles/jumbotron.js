@@ -2,6 +2,9 @@ import styled from 'styled-components/macro'
 
 export const Item = styled.div`
     display:flex;
+    @media(max-width:600px){
+        min-width:400px;
+    }
 `
 
 export const Inner = styled.div`

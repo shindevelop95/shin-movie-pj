@@ -11,7 +11,9 @@ const slideIn = keyframes`
 `
 export const Container = styled.div`
    margin: 100px 0;
-
+   @media(max-width:600px){
+        min-width:400px;
+    }
 
 `;
 
