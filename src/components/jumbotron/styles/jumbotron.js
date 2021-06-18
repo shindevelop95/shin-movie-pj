@@ -95,8 +95,6 @@ export const SubTitle = styled.h2`
     }
 `;
 
-
-
 export const Image = styled.img`
     object-fit: contain;
     height:500px;
