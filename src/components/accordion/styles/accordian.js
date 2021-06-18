@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Item = styled.div`
     margin:0 auto 10px auto;
-    width:900px;
+    width:1200px;
     &::first-of-type{
         margin-top:3em;
     }
@@ -34,7 +34,7 @@ export const Header = styled.div`
     justify-content: space-between;
     cursor:pointer;
     margin-bottom:1px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight:normal;
     background:#FFF0BD;
     padding:0.8em 1.2em;
@@ -44,6 +44,8 @@ export const Header = styled.div`
 
     .MuiSvgIcon-root{
         color:#FFC404;
+        width:30px;
+        height:30px;
     }
 
   
@@ -53,7 +55,7 @@ export const Body = styled.div`
     color:#707070;
     max-height:1200px;
     transition:max-height 0.25s cubic-beizer(0.5,0,0.1,1);
-    font-size:20px;
+    font-size:25px;
     font-weight:normal;
     line-height:normal;
     background:#FFF0BD;
@@ -68,15 +70,11 @@ export const Body = styled.div`
     }
 `;
 
-export const Frame = styled.div``;
-
-export const Inner = styled.div`
-  
-    
+export const Inner = styled.div` 
 `;
 
 export const Title = styled.h1`
-    font-size:35px;
+    font-size:50px;
     line-height:1.1.%;
     margin-bottom:80px;
     text-align: center;

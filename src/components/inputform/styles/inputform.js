@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-    width:900px;
+    width:1200px;
     margin:180px auto;
 
     @media (max-width:600px){
@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 
 export const Text = styled.h2`
-    font-size:20px;
+    font-size:25px;
     text-align: center;
     font-weight: normal;
 
@@ -22,12 +22,13 @@ export const Text = styled.h2`
 `
 
 export const Input = styled.input`
-    width:80%;
-    height:35px;
+    width:75%;
+    height:50px;
     border: 2px solid #FFC404;
+    font-size:25px;
     margin:30px 15px;
     border-radius:10px;
-    padding:5px 12px;
+    padding:5px 20px;
 
     @media (max-width:600px){
        width:300px;
@@ -39,7 +40,8 @@ export const Input = styled.input`
 export const Button = styled.button`
     background-color:#FFC404;
     color:#eee;
-    padding:10px 20px;
+    font-size:25px;
+    padding:14px 30px;
     border-radius:10px;
     border: 2px solid #FFC404;
     cursor: pointer;

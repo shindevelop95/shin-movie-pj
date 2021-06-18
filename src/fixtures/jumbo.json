@@ -5,7 +5,8 @@
       "subTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "image": "/images/misc/phone.png",
       "alt": "Tiger King on Netflix",
-      "direction": "row-reverse"
+      "direction": "row-reverse",
+      "data":"fade-right"
     },
     {
       "id": 2,
@@ -13,7 +14,8 @@
       "subTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "image": "/images/misc/tv.png",
       "alt": "Watch on mobile",
-      "direction": "row"
+      "direction": "row",
+      "data":"fade-left"
     },
     {
       "id": 3,
@@ -21,6 +23,7 @@
       "subTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "image": "/images/misc/stack.png",
       "alt": "Money Heist on Netflix",
-      "direction": "row-reverse"
+      "direction": "row-reverse",
+      "data":"fade-right"
     }
   ]

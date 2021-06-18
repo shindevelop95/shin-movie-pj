@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled, {keyframes} from 'styled-components/macro'
 
 export const Item = styled.div`
     @media(max-width:600px){
@@ -95,9 +95,18 @@ export const SubTitle = styled.h2`
     }
 `;
 
+const fadeIn= keyframes`
+    0%{
+       opacity:0;
+    }
+    100%{
+        opacity:1
+    }`
+
 export const Image = styled.img`
     object-fit: contain;
     height:500px;
+    animation: 1s ${fadeIn} ease-in;
 
     @media (max-width:600px){
        height:300px;

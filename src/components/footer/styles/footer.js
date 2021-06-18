@@ -38,14 +38,16 @@ export const InnerGroup = styled.div`
     }
 `
 
-export const Info = styled.p`
+export const Info = styled.span`
     color:#FFF0BD;
     margin-left:20px;
-    line-height:0.2;
+    line-height:1.5;
+    font-size:20px;
 `;
 
 export const Text = styled.p`
     color:#FFF0BD;
+    font-size:25px;
 `;
 
 export const LogoGroup = styled.div`
@@ -56,11 +58,11 @@ export const LogoGroup = styled.div`
 `;
 
 export const Logo = styled.img`
-    height:45px;
-    width:45px;
+    height:70px;
+    width:70px;
     margin-right:20px;
 `;
 
 export const WordLogo = styled.img`
-    height:60px;
+    height:80px;
 `;
