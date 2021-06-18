@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link as ReactRouterLink} from 'react-router-dom'  
-import { Background, SubText,Container, TextGroup,InnerGroup,Group, Logo, Text, Button} from './styles/header';
+import { Background,RightImg,SubText,Container, TextGroup,InnerGroup,Group, TextLogo, Button} from './styles/header';
 
 export default function Header({bg = true, children, ...restProps}){
     return bg ? (
@@ -33,14 +33,15 @@ Header.InnerGroup = function HeaderInnerGroup({children,...restProps}){
     return <InnerGroup {...restProps}>{children}</InnerGroup>
 }
 
-Header.Logo = function HeaderLogo({children,...restProps}){
-    return <Logo {...restProps}>{children}</Logo>
-}
 
-Header.Text = function HeaderText({children,...restProps}){
-    return <Text {...restProps}>{children}</Text>
+Header.TextLogo = function HeaderTextLogo({children,...restProps}){
+    return <TextLogo {...restProps}/>
 }
 
 Header.Button = function HeaderButton({children,...restProps}){
     return <Button {...restProps}>{children}</Button>
+}
+
+Header.RightImg = function HeaderRightImg({children,...restProps}){
+    return <RightImg {...restProps}/>
 }

@@ -1,27 +1,28 @@
 import styled from 'styled-components/macro'
 
 export const Item = styled.div`
-    display:flex;
     @media(max-width:600px){
         min-width:400px;
     }
 `
 
 export const Inner = styled.div`
+    width:90%;
     display:flex;
+    justify-content: space-around;
     align-items:center;
     flex-direction:${({direction}) => direction};
-    justify-content: space-between;;
-    max-width:1200px;
     margin:auto;
-    width:100%;
+    
 
     @media (max-width:1000px){
         flex-direction:column;
+        width:100%;
     }
 `;
 
 export const Container = styled.div`
+    margin:100px 0;
     @media(max-width:1000px){
         ${Item}:last-of-type h2 {
             margin-bottom:50px;
@@ -30,9 +31,6 @@ export const Container = styled.div`
 `;
 
 export const Pane = styled.div`
-    width:50%;
-    padding:20px;
-
     @media (max-width: 1000px){
         width:100%;
         padding : 0 45px;
@@ -41,11 +39,11 @@ export const Pane = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:35px;
+    font-size:50px;
     line-height:1.1.%;
     margin-bottom:8px;
     text-align:start;
-    width:400px;
+    width:600px;
     margin-left:120px;
     position:relative;
 
@@ -64,6 +62,7 @@ export const Title = styled.h1`
         margin:auto;
         margin-bottom:40px;
         margin-top: 40px;
+        width:300px;
 
         &:after{
         content:'';
@@ -80,10 +79,10 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
     color:rgba(0,0,0,.65);
-    font-size:20px;
+    font-size:25px;
     font-weight:normal;
-    line-height:normal;
-    width:400px;
+    line-height:1.5;
+    width:600px;
     text-align: start;
     margin-left:120px;
 
@@ -92,12 +91,17 @@ export const SubTitle = styled.h2`
         text-align:center;
         margin:auto;
         margin-bottom:40px;
+        width:300px;
     }
 `;
 
 
 
 export const Image = styled.img`
-    max-width:100%;
-    height:auto;
+    object-fit: contain;
+    height:500px;
+
+    @media (max-width:600px){
+       height:300px;
+    }
 `;
