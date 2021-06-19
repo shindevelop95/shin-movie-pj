@@ -2,16 +2,20 @@
     {
         "id":1,
         "title1":"1 month unlimited access",
-        "title2":"Thousand of Tv shows, movies & more"
+        "title2":"Thousand of Tv shows, movies & more",
+        "data":"fade-right"
     },
     {
         "id":2,
         "title1":"Stream on yourphone, laptop, tablet or TV",
-        "title2":"You can even Download & watch offline"
+        "title2":"You can even Download & watch offline",
+        "data":"fade-up"
     },
     {
         "id":3,
         "title1":"1 month unlimited access",
-        "title2":"Thousand of Tv shows, movies & more"
+        "title2":"Thousand of Tv shows, movies & more",
+        "data":"fade-left"
+        
     }
 ]

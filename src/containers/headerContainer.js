@@ -13,11 +13,11 @@ export function HeaderContainer(){
                 </Header.InnerGroup>
             </Header.Group>
                 <Header.TextGroup>
-                    <Header.TextLogo src="/images/landing/Welcome.png"/>
-                    <Header.SubText>Watch the largest collection of Movies and TV series anytime anywhere!</Header.SubText>
-                    <Header.Button >Go to Show</Header.Button>
+                    <Header.TextLogo data-aos="fade-right" src="/images/landing/Welcome.png"/>
+                    <Header.SubText data-aos="fade-right">Watch the largest collection of Movies and TV series anytime anywhere!</Header.SubText>
+                    <Header.Button data-aos="fade-right">Go to Show</Header.Button>
                 </Header.TextGroup>
-                <Header.RightImg src="/images/landing/land-abs.png"/>
+                <Header.RightImg data-aos="fade-left" src="/images/landing/land-abs.png"/>
             </Header.Frame>
         </Header>
     )

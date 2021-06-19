@@ -78,6 +78,18 @@ export const Title = styled.h1`
     line-height:1.1.%;
     margin-bottom:80px;
     text-align: center;
+    position:relative;
+
+    &:after{
+        content:"";
+        position:absolute;
+        width:100px;
+        height:3px;
+        background-color:#FFC404;
+        bottom: -10px;
+        left:50%;
+        transform:translateX(-50%);
+    }
 
     @media (max-width:600px){
         font-size:25px;

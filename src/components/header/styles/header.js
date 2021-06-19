@@ -27,12 +27,19 @@ export const TextLogo = styled.img`
 `;
 
 export const Button = styled.button`
-    background-color:#FFC404;
-    color:#eee;
+    background-color:transparent;
+    color:#FFC404;
     padding:10px 20px;
+    font-size:25px;
     border-radius:10px;
     border: 2px solid #FFC404;
     cursor: pointer;
+    transition:.5s;
+
+    &:hover{
+        background-color:#FFC404;;
+        color:#FFFFFF;
+    }
 
     @media (max-width:600px){
         width:300px;

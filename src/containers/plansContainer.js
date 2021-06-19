@@ -9,7 +9,7 @@ export function PlansContainer(){
             <Plans.Title>Our Plans & Pricing</Plans.Title>
             <Plans.Wrapper>
                 {plansData.map((item)=>(
-                    <Plans.Group>
+                    <Plans.Group data-aos={item.data}>
                         <Plans.Text><DoneAllIcon/>{item.title1}</Plans.Text>
                         <Plans.Text><DoneAllIcon/>{item.title2}</Plans.Text>
                     </Plans.Group>
@@ -17,7 +17,7 @@ export function PlansContainer(){
                 ))}
             </Plans.Wrapper>
             <Card>
-                <Card.Group>
+                <Card.Group data-aos="fade-up">
                     <Card.Title>Free Trial</Card.Title>
                     <Card.SubTitle>Free</Card.SubTitle>
                     <Card.Text>HD Available</Card.Text>
@@ -25,7 +25,7 @@ export function PlansContainer(){
                     <Card.Text>20 movies and shows</Card.Text>
                     <Card.Button>Choose Plan</Card.Button>
                 </Card.Group>
-                <Card.Group>
+                <Card.Group data-aos="fade-down">
                     <Card.Title>Starter</Card.Title>
                     <Card.SubTitle><i>$</i>10<span>/month</span></Card.SubTitle>
                     <Card.Text>HD Available</Card.Text>
@@ -33,7 +33,7 @@ export function PlansContainer(){
                     <Card.Text>20 movies and shows</Card.Text>
                     <Card.Button>Choose Plan</Card.Button>
                 </Card.Group>
-                <Card.Group>
+                <Card.Group data-aos="fade-up">
                     <Card.Title>Premium</Card.Title>
                     <Card.SubTitle><i>$</i>17<span>/month</span></Card.SubTitle>
                     <Card.Text>HD Available</Card.Text>
