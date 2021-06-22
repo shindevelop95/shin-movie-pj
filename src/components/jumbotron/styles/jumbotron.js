@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components/macro'
+import styled, { keyframes } from 'styled-components/macro'
 
 export const Item = styled.div`
     @media(max-width:600px){
@@ -11,7 +11,7 @@ export const Inner = styled.div`
     display:flex;
     justify-content: space-around;
     align-items:center;
-    flex-direction:${({direction}) => direction};
+    flex-direction:${({ direction }) => direction};
     margin:auto;
     
 
@@ -95,7 +95,7 @@ export const SubTitle = styled.h2`
     }
 `;
 
-const fadeIn= keyframes`
+const fadeIn = keyframes`
     0%{
        opacity:0;
     }
