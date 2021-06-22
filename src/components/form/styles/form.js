@@ -33,10 +33,12 @@ export const Base = styled.form`
 `;
 
 export const Title = styled.h1`
-    color:#fff;
+    color:#FFC404;
     font-size:32px;
     font-weight:bold;
     margin-bottom:28px;
+    text-align: center;
+    text-transform: uppercase;
 `;
 
 export const Text = styled.p`
@@ -77,16 +79,24 @@ export const Input = styled.input`
 `;
 
 export const Submit = styled.button`
-    background:#e50914;
-    border-radius:4px;
-    font-size:16px;
-    font-weight:bold;
-    margin:24px 0 12px;
-    padding:16px;
-    border:0;
-    color:white;
-    cursor:pointerl
+    background-color:transparent;
+    color:#FFC404;
+    padding:10px 20px;
+    font-size:25px;
+    border-radius:10px;
+    border: 2px solid #FFC404;
+    cursor: pointer;
+    transition:.5s;
 
+    &:hover{
+        background-color:#FFC404;;
+        color:#FFFFFF;
+    }
+
+    @media (max-width:600px){
+        width:300px;
+       margin:0 auto;
+    }
     &:disabled{
         opacity:0.5s;
     }
