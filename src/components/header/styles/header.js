@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const Background = styled.div`
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/landing/land.jpg')}) top left / cover
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), url(${({ src }) => (src ? `../images/misc/${src}.png` : '../images/landing/land.jpg')}) top left / cover
     no-repeat;
     height:100vh;
     margin-bottom:100px;

@@ -10,6 +10,7 @@ import { useAuthListener } from './hooks'
 
 function App() {
   const user = useAuthListener();
+  console.log("user in app", user);
   return (
     <Router>
       <Switch>
