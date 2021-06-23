@@ -6,9 +6,10 @@ import Browse from './pages/browse'
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes'
 import * as ROUTES from './constant/routes'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useAuthListener } from './hooks'
 
 function App() {
-  const user = null
+  const user = useAuthListener();
   return (
     <Router>
       <Switch>
