@@ -4,7 +4,7 @@ export const FeatureContext = createContext();
 
 export default function List({children,...restProps}){
     const [showFeature, setShowFeature] = useState(false);
-    const [itemmFeature,setItemFeature] = useState({});
+    const [itemFeature,setItemFeature] = useState({});
 
     return (
         <FeatureContext.Provider
@@ -39,11 +39,11 @@ List.Entities = function ListEntities({children,...restProps}){
     return <Entities {...restProps}>{children}</Entities>
 }
 
-List.item = function Listitem({children,...restProps}){
+List.Item = function ListItem({children,...restProps}){
     const {setShowFeature,setItemFeature} = useContext(FeatureContext);
     return (<Item 
                 onClick={()=>{
-                    setItemFeature(item);
+                    setItemFeature();
                     setShowFeature(true);
                 }}
                 {...restProps}>

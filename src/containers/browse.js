@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
-import { Footer,Header,Loading} from '../components';
+import { List,Footer,Header,Loading} from '../components';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profile';
 import * as ROUTES from '../constant/routes'
@@ -45,8 +45,14 @@ export function BrowseContainer({ slides }) {
       <Header.InnerFrame>
         <Header.LinkGroup>
           <Header.TextLogo src="/images/logo/miryu.png" to={ROUTES.HOME} />
-          <Header.TextLink>Series</Header.TextLink>
-          <Header.TextLink>Films</Header.TextLink>
+          <Header.TextLink
+            active={category ==='series' ? 'true' : 'false'}
+            onClick={() =>setCategory('series')}
+          >Series</Header.TextLink>
+          <Header.TextLink
+          active={category ==='films' ? 'true' : 'false'}
+            onClick={() =>setCategory('films')}
+          >Films</Header.TextLink>
         </Header.LinkGroup>
        <Header.LinkGroup>
        <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
@@ -75,6 +81,33 @@ export function BrowseContainer({ slides }) {
           <Header.PlayButton>Watch Now</Header.PlayButton>
         </Header.Feature>
     </Header>
+    <List.Group>
+      {slideRows.map((slideItem) => (
+        <List key={`${category}-${slideItem.title.toLowerCase()}`}>
+          <List.Title>{slideItem.title}</List.Title>
+          <List.Entities>
+            {slideItem.data.map((item) => (
+              <List.Item key={item.docId} item={item}>
+                <List.Image
+                  src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
+
+                />
+                <List.Meta>
+                  <List.SubTitle>{item.title}</List.SubTitle>
+                  <List.Text>{item.description}</List.Text>
+                </List.Meta> 
+              </List.Item>
+            ))}
+          </List.Entities>
+          {/*<List.Feature category={category}>
+            <Player>
+              <Player.Button/>
+              <Player.Video src="videos/bunny.mp4"/>
+            </Player>
+          </List.Feature>*/}
+        </List>
+      ))}
+    </List.Group>
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />

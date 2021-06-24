@@ -24,8 +24,9 @@ export const Content = styled.div``;
 
 export const Meta = styled.div``;
 
-export const Entites = styled.div``;
+export const Entities = styled.div``;
 
 export const Item = styled.div``;
 
 export const Image = styled.img``;
+
