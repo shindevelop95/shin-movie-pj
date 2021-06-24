@@ -31,7 +31,7 @@ function App() {
           <Signup />
         </IsUserRedirect>
         <ProtectedRoute user={user} path={ROUTES.BROWSE}>
-          <Browse />
+          <Browse/>
         </ProtectedRoute>
         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.HOME}>
           <Home />
