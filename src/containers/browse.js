@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
-import { List,Footer,Header,Loading} from '../components';
+import { FooterContainer } from './footerContainer';
+import { List,Footer,Header,Loading, Player} from '../components';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profile';
 import * as ROUTES from '../constant/routes'
@@ -42,6 +43,7 @@ export function BrowseContainer({ slides }) {
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
     <Header src="batman-landing">
+      <Header.Filter/>
       <Header.InnerFrame>
         <Header.LinkGroup>
           <Header.TextLogo src="/images/logo/miryu.png" to={ROUTES.HOME} />
@@ -99,15 +101,16 @@ export function BrowseContainer({ slides }) {
               </List.Item>
             ))}
           </List.Entities>
-          {/*<List.Feature category={category}>
-            <Player>
-              <Player.Button/>
-              <Player.Video src="videos/bunny.mp4"/>
-            </Player>
-          </List.Feature>*/}
+          <List.Feature category={category}>
+                <Player>
+                <Player.Button />
+                <Player.Video src="/videos/bunny.mp4" />
+              </Player>
+          </List.Feature>
         </List>
       ))}
     </List.Group>
+    <FooterContainer/>
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />

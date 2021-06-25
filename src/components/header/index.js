@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link as ReactRouterLink} from 'react-router-dom'  
 import SearchIcon from '@material-ui/icons/Search';
 
-import { Background,InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
+import { Background, Filter, InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
 
 export default function Header({bg = true, children, ...restProps}){
     return bg ? (
@@ -20,6 +20,10 @@ Header.Frame = function HeaderFrame({children,...restProps}){
 
 Header.InnerFrame = function HeaderInnerFrame({children,...restProps}){
     return <InnerFrame {...restProps}>{children}</InnerFrame>
+}
+
+Header.Filter = function HeaderFilter({children,...restProps}){
+    return <Filter {...restProps}/>
 }
 
 

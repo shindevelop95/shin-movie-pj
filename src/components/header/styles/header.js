@@ -10,9 +10,22 @@ export const Background = styled.div`
     margin-bottom:100px;
     background-repeat: no-repeat;
     background-size:100%;
+    position:relative;
 `;
 
+export const Filter = styled.span`
+    position:absolute;
+    background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.80),
+    black
+  );
+    height:20rem;
+    width:100%;
+    bottom:0;
 
+`;
 
 
 export const Container = styled.div`
@@ -112,7 +125,9 @@ export const InnerFrame = styled(Container)`
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-`
+
+  `
+
 
 export const TextLogo = styled.img`
     height:70px;
