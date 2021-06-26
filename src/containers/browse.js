@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
+import request from '../api/request'
 import { FooterContainer } from './footerContainer';
+import { RecommendContainer } from './recommendContainer';
 import {BannerContainer} from './bannerContainer';
-import { List,Footer,Header,Loading, Player} from '../components';
+import { List,Footer,Header,Loading, Player, Recommend} from '../components';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profile';
 import * as ROUTES from '../constant/routes'
@@ -112,6 +114,11 @@ export function BrowseContainer({ slides }) {
       ))}
     </List.Group>
     <BannerContainer/>
+    <Recommend.Title>Our Recommendation</Recommend.Title>
+    <RecommendContainer fetchUrl = {request.fetchTrending}/>
+    <RecommendContainer fetchUrl = {request.fetchNetflixOriginals}/>
+    <RecommendContainer fetchUrl = {request.fetchTopRated}/>
+    <RecommendContainer fetchUrl = {request.fetchActionMovies}/>
     <FooterContainer/>
     </>
   ) : (
