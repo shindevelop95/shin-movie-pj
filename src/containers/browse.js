@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Fuse from 'fuse.js';
 import { FooterContainer } from './footerContainer';
+import {BannerContainer} from './bannerContainer';
 import { List,Footer,Header,Loading, Player} from '../components';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profile';
@@ -110,6 +111,7 @@ export function BrowseContainer({ slides }) {
         </List>
       ))}
     </List.Group>
+    <BannerContainer/>
     <FooterContainer/>
     </>
   ) : (

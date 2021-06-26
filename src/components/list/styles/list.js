@@ -118,7 +118,7 @@ export const FeatureText = styled.p`
   font-size: 18px;
   color: white;
   font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
-  margin: 0;
+  margin: 20px 0;
   @media (max-width: 600px) {
     line-height: 22px;
   }
@@ -184,6 +184,7 @@ export const Maturity = styled.div`
   text-align: center;
   color: white;
   font-weight: bold;
+  margin:20px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
   font-size: 12px;
