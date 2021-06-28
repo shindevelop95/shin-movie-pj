@@ -15,12 +15,26 @@ export function BrowseContainer({ slides }) {
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
+  const [show,setShow] = useState(false);
   const [slideRows, setSlideRows] = useState([]);
 
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
   console.log("show me the user", user)
     console.log("show me the profile", profile)
+
+    useEffect(() => {
+      window.addEventListener("scroll",() => {
+          if(window.scrollY > 10){
+              setShow(true);
+          }else setShow(false);
+      });
+      return() => {
+          window.removeEventListener("scroll");
+      };
+
+  },[]);
+  console.log("SHOW ME SHOW!", show)
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -47,7 +61,8 @@ export function BrowseContainer({ slides }) {
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
     <Header src="batman-landing">
       <Header.Filter/>
-      <Header.InnerFrame>
+      <Header.InnerFrame show={show}>
+        <Header.FrameGroup>
         <Header.LinkGroup>
           <Header.TextLogo src="/images/logo/miryu.png" to={ROUTES.HOME} />
           <Header.TextLink
@@ -76,14 +91,17 @@ export function BrowseContainer({ slides }) {
            </Header.Dropdown>
          </Header.Profile>
        </Header.LinkGroup>
+        </Header.FrameGroup>
       </Header.InnerFrame>
         <Header.Feature>
+          <Header.FeatureGroup>
           <Header.FeatureCallOut>Watch Batman Now</Header.FeatureCallOut>
           <Header.Text>
             Forever alone in a crowd, failed comedian Arther Fleck seeks conncection as he walks the streets of Gotham City. Arther wears two mask 
             -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the wolrd around him. 
           </Header.Text>
           <Header.PlayButton>Watch Now</Header.PlayButton>
+          </Header.FeatureGroup>
         </Header.Feature>
     </Header>
     <List.Group>

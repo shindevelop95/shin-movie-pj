@@ -62,6 +62,7 @@ export const TextLink = styled.p`
     color:white;
     text-decoration:none;
     margin-right:30px;
+    font-size:30px;
     font-weight:${({active}) => (active === 'true' ? '700' : 'normal')};
     cursor:pointer;
 
@@ -122,12 +123,22 @@ export const Profile = styled.div`
     }
 `
 export const InnerFrame = styled(Container)`
+    position:fixed;
+    height:100px;
+    background-color:${({show}) => (show  ? 'rgba(0,0,0,.7)' : 'transparent')};
+    width:100%;
+    top:0%;
+    z-index:20000;
+    padding:0 20px;
+  `
+export const FrameGroup = styled.div`
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-
-  `
-
+    width:90%;
+    display:flex;
+    margin:0 auto;
+`;
 
 export const TextLogo = styled.img`
     height:70px;
@@ -138,15 +149,18 @@ export const TextLogo = styled.img`
 export const Feature = styled(Container)`
     padding:150px 0 500px 0;
     flex-direction:column;
- 
     width:40%;
-   
     margin-left:7.7%;
-
     @media (max-width:1100px){
         display:none;
 }
 `;
+
+export const FeatureGroup = styled.div`
+    margin-top:200px;
+`;
+
+
 
 export const FeatureCallOut = styled.h2`
     color:white;
@@ -212,7 +226,7 @@ export const RightImg = styled.img`
 export const Text = styled.p`
     color:white;
     font-size:22px;
-    margin:0;
+    margin:30px 0;
     line-height:normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.45);
 `
@@ -226,7 +240,8 @@ export const Search = styled.div`
         cursor:pointer;
         background-color: transparent;
         border:0;
-        width:16px;
+        width:40px;
+        height:40px;
     }
 
     @media (max-width:700px){
@@ -238,10 +253,13 @@ export const SearchInput = styled.input`
     background-color:#44444459;
     color:white;
     border:1px solid white;
+    font-size:40px;
+    padding:5px;
     transition:width 0.5s;
-    height:30px;
+    height:40px;
     font-size:14px;
-    width:${({active}) => (active === true? '200px':'0')}
+    width:${({active}) => (active === true? '300px':'0')};
+    opacity:${({active}) => (active === true? '1':'0')}
 `
 
 

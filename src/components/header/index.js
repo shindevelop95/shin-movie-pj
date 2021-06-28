@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link as ReactRouterLink} from 'react-router-dom'  
 import SearchIcon from '@material-ui/icons/Search';
 
-import { Background, Filter, InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
+import { Background, FrameGroup, FeatureGroup,Filter, InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
 
 export default function Header({bg = true, children, ...restProps}){
     return bg ? (
@@ -23,6 +23,12 @@ Header.InnerFrame = function HeaderInnerFrame({children,...restProps}){
 }
 
 Header.Filter = function HeaderFilter({children,...restProps}){
+    
+    return <Filter {...restProps}/>
+}
+
+Header.Filter = function HeaderFilter({children,...restProps}){
+    
     return <Filter {...restProps}/>
 }
 
@@ -39,8 +45,16 @@ Header.Dropdown = function HeaderDropdown({children,...restProps}){
     return <Dropdown {...restProps}>{children}</Dropdown>
 }
 
+Header.FeatureGroup = function HeaderFeatureGroup({children,...restProps}){
+    return <FeatureGroup {...restProps}>{children}</FeatureGroup>
+}
+
 Header.LinkGroup = function HeaderLinkGroup({children,...restProps}){
     return <LinkGroup {...restProps}>{children}</LinkGroup>
+}
+
+Header.FrameGroup = function HeaderFrameGroup({children,...restProps}){
+    return <FrameGroup {...restProps}>{children}</FrameGroup>
 }
 
 Header.FeatureCallOut = function HeaderFeatureCallOut({children,...restProps}){

@@ -7,6 +7,7 @@ export const Title = styled.p`
   margin-left: 56px;
   margin-right: 56px;
   margin-top: 0;
+  z-index:10000;
 `;
 
 export const Container = styled.div`
@@ -31,9 +32,9 @@ export const Group = styled.div`
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
-      margin-top: -100px;
+      margin-top: -180px;
       background-color: black;
-      z-index: 100;
+      z-index: 3000;
     }
   }
 

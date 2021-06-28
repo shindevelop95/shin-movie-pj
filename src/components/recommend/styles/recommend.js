@@ -13,31 +13,85 @@ export const Title = styled.div`
     padding:50px 0;
 `;
 
-export const Frame = styled.div``;
+export const Header = styled.h1`
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform:translateX(-50%);
+    margin:auto 0;
+    color:#eee;
+    text-align: center;
+    font-size:18px;
+    z-index:1500;
+`;
+
+export const Text = styled.p``;
+
+export const Frame = styled.div`
+    position:relative;
+    height:400px;
+    width:300px;
+    margin-right:20px;
+    transition:transform 450ms;
+    &:hover{
+            transform:scale(1.1);
+        } 
+    &:after{
+            content:' ';
+            position:absolute;
+            bottom:0%;
+            left:5%;
+            background-color:rgba(0,0,0,.8);
+            height:120px;
+            width:90%;
+            z-index:999
+        }
+`;
 
 export const Image = styled.img`
         object-fit: contain;
-        width:100%;
+        width:300px;
         max-height:400px;
-        margin-right:30px;
-        transition:transform 450ms;
+        
+        
         position:relative;
 
-        &:hover{
-            transform:scale(1.1);
-        }
+     
+         
+
 `
 
 export const Group = styled.div`
-    max-width:70%;
+    max-width:75%;
     overflow-x: scroll;
     margin:0 auto;
     display:flex;
     padding:20px;
-    overflow-y: hidden;
-    cursor:pointer;
 
+    cursor:pointer;
+ 
+   
     &::-webkit-scrollbar{
         display:none;
+    }
+`;
+
+export const Button = styled.button`
+    position:absolute;
+    right:8%;
+    bottom:18%;
+    z-index:1500;
+    background-color: transparent;
+    border: none;
+
+    .MuiSvgIcon-root{
+        color:red;
+        cursor:pointer;
+        height:35px;
+        width:35px;
+    }
+
+    .MuiSvgIcon-root:hover{
+        color:#eee;
     }
 `;
