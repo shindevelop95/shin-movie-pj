@@ -11,6 +11,10 @@ export const Title = styled.div`
     text-align:center;
     font-weight:500;
     padding:50px 0;
+    @media (max-width:700px){
+       font-size:35px;
+    }
+    
 `;
 
 export const Header = styled.h1`
@@ -23,6 +27,9 @@ export const Header = styled.h1`
     text-align: center;
     font-size:18px;
     z-index:1500;
+    @media (max-width:700px){
+       display:none;
+    }
 `;
 
 export const Text = styled.p``;
@@ -46,19 +53,25 @@ export const Frame = styled.div`
             width:90%;
             z-index:999
         }
+        @media (max-width:700px){
+            height:100px;
+            width:80px;
+            &:after{
+                background-color:transparent;
+            }
+        }
 `;
 
 export const Image = styled.img`
         object-fit: contain;
         width:300px;
         max-height:400px;
-        
-        
         position:relative;
 
-     
-         
-
+        @media (max-width:700px){
+            height:100px;
+            width:80px;
+    }
 `
 
 export const Group = styled.div`
@@ -73,6 +86,10 @@ export const Group = styled.div`
    
     &::-webkit-scrollbar{
         display:none;
+    }
+    @media (max-width:700px){
+       
+
     }
 `;
 
@@ -93,5 +110,8 @@ export const Button = styled.button`
 
     .MuiSvgIcon-root:hover{
         color:#eee;
+    }
+    @media (max-width:700px){
+       display:none;
     }
 `;

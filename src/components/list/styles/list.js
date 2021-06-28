@@ -24,6 +24,10 @@ export const Container = styled.div`
   &:last-of-type {
     margin-bottom: 0;
   }
+  @media (max-width:700px){
+       margin:0 auto;
+       background-color:black;
+    }
 `;
 
 export const Group = styled.div`
@@ -37,6 +41,10 @@ export const Group = styled.div`
       z-index: 3000;
     }
   }
+  @media (max-width:700px){
+      margin-top: 20px;
+      background-color: transparent;
+    }
 
 
 `;

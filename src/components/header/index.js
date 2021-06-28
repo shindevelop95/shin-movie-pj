@@ -10,7 +10,7 @@ export default function Header({bg = true, children, ...restProps}){
             {children}
         </Background>
     ) : (
-        children
+       children
     )
 }
 
@@ -113,7 +113,7 @@ Header.Search = function HeaderSearch({searchTerm,setSearchTerm,...restProps}){
                 <SearchInput
                     value={searchTerm}
                     onChange={({target}) => setSearchTerm(target.value)}
-                    placeholder="Searcg films and series"
+                    placeholder="Search for films"
                     active={searchActive}
                 />
               

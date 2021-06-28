@@ -1,16 +1,28 @@
 import styled from 'styled-components/macro'
 
 export const Background = styled.div`
-    /*background:linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), url(${({ src }) => (src ? `../images/misc/${src}.png` : '../images/landing/land.jpg')}) top left / cover
-    no-repeat;*/
     background:${({src}) => src? `url(../images/misc/${src}.jpg)})`
                                 :`linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), 
                                   url(../images/landing/land.jpg)})`};
-    height:100vh;
+    max-height:100vh;
+    width:100%;
     margin-bottom:100px;
     background-repeat: no-repeat;
     background-size:100%;
-    position:relative;
+    
+   /* @media (max-width:700px){
+        background:${({src}) => src? `url(../images/misc/${src}.jpg)})`
+                                :`linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), 
+                                  url(../images/landing/land.jpg)})`};
+        height:23vh;
+        object-fit:contain;
+        width:100%;
+        margin-bottom:0;
+}*/
+
+
+    
+
 `;
 
 export const Filter = styled.span`
@@ -24,6 +36,9 @@ export const Filter = styled.span`
     height:20rem;
     width:100%;
     bottom:0;
+    @media (max-width:700px){
+       display:none;
+}
 
 `;
 
@@ -47,8 +62,8 @@ export const Picture = styled.button`
     background:url(${({src}) => src});
     background-size:contain;
     border:0;
-    width:32px;
-    height:32px;
+    width:50px;
+    height:50px;
     cursor:pointer;
 `;
 
@@ -59,10 +74,11 @@ export const LinkGroup = styled.div`
 `;
 
 export const TextLink = styled.p`
-    color:white;
+    color:#eee;
     text-decoration:none;
     margin-right:30px;
     font-size:30px;
+    border-bottom:${({active}) => (active === 'true' ? '3px solid #FFC404':'none')};
     font-weight:${({active}) => (active === 'true' ? '700' : 'normal')};
     cursor:pointer;
 
@@ -130,6 +146,9 @@ export const InnerFrame = styled(Container)`
     top:0%;
     z-index:20000;
     padding:0 20px;
+    @media (max-width:700px){
+        display:none;
+    }
   `
 export const FrameGroup = styled.div`
     flex-direction:row;
@@ -138,6 +157,7 @@ export const FrameGroup = styled.div`
     width:90%;
     display:flex;
     margin:0 auto;
+    
 `;
 
 export const TextLogo = styled.img`
@@ -151,6 +171,7 @@ export const Feature = styled(Container)`
     flex-direction:column;
     width:40%;
     margin-left:7.7%;
+  
     @media (max-width:1100px){
         display:none;
 }
@@ -234,15 +255,22 @@ export const Text = styled.p`
 export const Search = styled.div`
     display:flex;
     align-items:center;
-
+   
     .MuiSvgIcon-root{
         color:white;
         cursor:pointer;
         background-color: transparent;
         border:0;
-        width:40px;
-        height:40px;
+        width:50px;
+        height:50px;
+        transition:.5s;
     }
+
+    &:hover .MuiSvgIcon-root{
+        color:#FFC404;
+        transform:scale(1.1);
+    }
+  
 
     @media (max-width:700px){
         display:none;
@@ -251,15 +279,20 @@ export const Search = styled.div`
 
 export const SearchInput = styled.input`
     background-color:#44444459;
-    color:white;
+    color:black;
     border:1px solid white;
     font-size:40px;
     padding:5px;
     transition:width 0.5s;
     height:40px;
-    font-size:14px;
+    font-size:20px;
     width:${({active}) => (active === true? '300px':'0')};
-    opacity:${({active}) => (active === true? '1':'0')}
+    opacity:${({active}) => (active === true? '1':'0')};
+
+    &:focus{
+        background-color:#FFF08D;
+        outline:none;
+    }
 `
 
 

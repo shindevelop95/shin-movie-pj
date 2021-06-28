@@ -95,7 +95,7 @@ export function BrowseContainer({ slides }) {
       </Header.InnerFrame>
         <Header.Feature>
           <Header.FeatureGroup>
-          <Header.FeatureCallOut>Watch Batman Now</Header.FeatureCallOut>
+          <Header.FeatureCallOut>The Dark Knight</Header.FeatureCallOut>
           <Header.Text>
             Forever alone in a crowd, failed comedian Arther Fleck seeks conncection as he walks the streets of Gotham City. Arther wears two mask 
             -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the wolrd around him. 
