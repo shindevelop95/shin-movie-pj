@@ -9,7 +9,7 @@ export function PlansContainer(){
             <Plans.Title>Our Plans & Pricing</Plans.Title>
             <Plans.Wrapper>
                 {plansData.map((item)=>(
-                    <Plans.Group data-aos={item.data}>
+                    <Plans.Group key={item.id} data-aos={item.data}>
                         <Plans.Text><DoneAllIcon/>{item.title1}</Plans.Text>
                         <Plans.Text><DoneAllIcon/>{item.title2}</Plans.Text>
                     </Plans.Group>

@@ -5,7 +5,6 @@ import axios from '../api/axios'
 const base_url = "https://image.tmdb.org/t/p/original/";
 export function RecommendContainer({fetchUrl}){
     const [movies, setMovies] = useState([])
-    const [like, setLike] = useState(false);
 
     useEffect(() =>{
         async function fetchData() {

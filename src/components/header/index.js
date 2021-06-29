@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Link as ReactRouterLink} from 'react-router-dom'  
+import {Link as ReachRouterLink} from 'react-router-dom'  
 import SearchIcon from '@material-ui/icons/Search';
-
 import { Background, FrameGroup, FeatureGroup,Filter, InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
 
 export default function Header({bg = true, children, ...restProps}){
@@ -90,12 +89,18 @@ Header.InnerGroup = function HeaderInnerGroup({children,...restProps}){
 }
 
 
-Header.TextLogo = function HeaderTextLogo({children,...restProps}){
-    return <TextLogo {...restProps}/>
+Header.TextLogo = function HeaderTextLogo({to,...restProps}){
+    return (
+        <ReachRouterLink to={to}>
+            <TextLogo {...restProps}/>
+        </ReachRouterLink>
+    )
 }
 
-Header.Button = function HeaderButton({children,...restProps}){
-    return <Button {...restProps}>{children}</Button>
+Header.Button = function HeaderButton({to,children,...restProps}){
+    return (<ReachRouterLink to={to}>
+                <Button {...restProps}>{children}</Button>
+            </ReachRouterLink>)
 }
 
 Header.PlayButton = function HeaderPlayButton({children,...restProps}){

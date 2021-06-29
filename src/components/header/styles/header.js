@@ -1,28 +1,19 @@
 import styled from 'styled-components/macro'
 
 export const Background = styled.div`
-    background:${({src}) => src? `url(../images/misc/${src}.jpg)})`
-                                :`linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), 
-                                  url(../images/landing/land.jpg)})`};
-    max-height:100vh;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), url(../images/landing/land.jpg);
+    height:100vh;
     width:100%;
     margin-bottom:100px;
     background-repeat: no-repeat;
     background-size:100%;
     
-   /* @media (max-width:700px){
-        background:${({src}) => src? `url(../images/misc/${src}.jpg)})`
-                                :`linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), 
-                                  url(../images/landing/land.jpg)})`};
-        height:23vh;
+    @media (max-width:700px){
+        height:300px;
         object-fit:contain;
         width:100%;
         margin-bottom:0;
-}*/
-
-
-    
-
+}
 `;
 
 export const Filter = styled.span`
@@ -161,9 +152,12 @@ export const FrameGroup = styled.div`
 `;
 
 export const TextLogo = styled.img`
-    height:70px;
+    height:80px;
     margin-right:50px;
     object-fit:contain;
+    @media (max-width:700px){
+       display:none;
+}
 `;
 
 export const Feature = styled(Container)`
@@ -172,13 +166,18 @@ export const Feature = styled(Container)`
     width:40%;
     margin-left:7.7%;
   
-    @media (max-width:1100px){
-        display:none;
-}
+   @media (max-width:700px){
+        margin:auto;
+        padding:initial;
+        width:80%;
+   }
 `;
 
 export const FeatureGroup = styled.div`
     margin-top:200px;
+    @media (max-width:700px){
+        margin-top:0;
+    }
 `;
 
 
@@ -191,6 +190,11 @@ export const FeatureCallOut = styled.h2`
     text-shadow:2px 2px 4px rgba(0,0,0,0.45);
     margin:0;
     margin-bottom:20px;
+
+    @media (max-width:700px){
+        font-size:25px;
+        text-align:center;
+    }
 `;
 
 
@@ -218,16 +222,30 @@ export const Button = styled.button`
 export const PlayButton = styled(Button)`
     width:200px;
     margin-top:20px;
+
+    @media (max-width:700px){
+        width:150px;
+        margin:auto;
+        display:block;
+        font-size:15px;
+   }
 `
 
 export const SubText = styled.p`
     color:rgba(255,255,255,.75);
-    font-size:25px;
+    font-size:40px;
     width:600px;
+    @media (max-width:700px){
+      display:none;
+}
 `;
 
 export const TextGroup = styled.div`
     margin-top:300px;
+    @media (max-width:700px){
+        text-align:center;
+        margin-top:100px;;
+}
 `;
 
 export const InnerGroup = styled.div`
@@ -241,6 +259,10 @@ export const RightImg = styled.img`
     top:-15%;
     right:10%;
     height:1000px;
+
+    @media (max-width:700px){
+        display:none;
+}
    
 `;
 
@@ -250,6 +272,11 @@ export const Text = styled.p`
     margin:30px 0;
     line-height:normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.45);
+
+    @media (max-width:700px){
+        font-size:15px;
+        text-align:center;
+    }
 `
 
 export const Search = styled.div`

@@ -15,7 +15,7 @@ export const Container = styled.div`
   flex-direction: column;
   margin-bottom: 50px;
   margin-left:100px;
-
+  
   > ${Title} {
     @media (max-width: 1000px) {
       margin-left: 30px;
@@ -26,7 +26,7 @@ export const Container = styled.div`
   }
   @media (max-width:700px){
        margin:0 auto;
-       background-color:black;
+       background-color: black;
     }
 `;
 
@@ -42,7 +42,6 @@ export const Group = styled.div`
     }
   }
   @media (max-width:700px){
-      margin-top: 20px;
       background-color: transparent;
     }
 

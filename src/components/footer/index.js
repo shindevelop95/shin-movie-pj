@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, OuterWrapper, Wrapper, Group, InnerGroup, Info, Text,Logo,WordLogo,LogoGroup } from './styles/footer';
-
+import { Link as ReachRouterLink } from 'react-router-dom';
 export default function Footer({children,...restProps}){
     return(
         <Container {...restProps}>
@@ -13,8 +13,12 @@ Footer.Logo = function FooterLogo({children, ...restProps}){
     return<Logo {...restProps}/>
 }
 
-Footer.WordLogo = function FooterWordLogo({children, ...restProps}){
-    return<WordLogo {...restProps}/>
+Footer.WordLogo = function FooterWordLogo({to,children, ...restProps}){
+    return (
+        <ReachRouterLink to={to}>
+            <WordLogo {...restProps}/>
+        </ReachRouterLink>
+    )
 }
 
 Footer.LogoGroup = function FooterLogoGroup({children, ...restProps}){

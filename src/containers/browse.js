@@ -4,7 +4,7 @@ import request from '../api/request'
 import { FooterContainer } from './footerContainer';
 import { RecommendContainer } from './recommendContainer';
 import {BannerContainer} from './bannerContainer';
-import { List,Footer,Header,Loading, Player, Recommend} from '../components';
+import { List,Header, BrowseHeader,Loading, Player, Recommend} from '../components';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profile';
 import * as ROUTES from '../constant/routes'
@@ -20,8 +20,6 @@ export function BrowseContainer({ slides }) {
 
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
-  console.log("show me the user", user)
-    console.log("show me the profile", profile)
 
     useEffect(() => {
       window.addEventListener("scroll",() => {
@@ -30,11 +28,10 @@ export function BrowseContainer({ slides }) {
           }else setShow(false);
       });
       return() => {
-          window.removeEventListener("scroll");
+          window.removeEventListener("scroll",null);
       };
 
   },[]);
-  console.log("SHOW ME SHOW!", show)
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -59,12 +56,12 @@ export function BrowseContainer({ slides }) {
   return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
-    <Header src="batman-landing">
+    <BrowseHeader src="batman-landing">
       <Header.Filter/>
       <Header.InnerFrame show={show}>
         <Header.FrameGroup>
         <Header.LinkGroup>
-          <Header.TextLogo src="/images/logo/miryu.png" to={ROUTES.HOME} />
+          <Header.TextLogo to={ROUTES.HOME} src="/images/logo/miryu.png" />
           <Header.TextLink
             active={category ==='series' ? 'true' : 'false'}
             onClick={() =>setCategory('series')}
@@ -84,7 +81,7 @@ export function BrowseContainer({ slides }) {
                <Header.TextLink>{user.displayName}</Header.TextLink>
              </Header.LinkGroup>
              <Header.LinkGroup>
-               <Header.TextLink onClick={() => firebase.auth.signOut()}>
+               <Header.TextLink onClick={() => firebase.auth().signOut()}>
                  Sign Out
                </Header.TextLink>
              </Header.LinkGroup>
@@ -103,7 +100,7 @@ export function BrowseContainer({ slides }) {
           <Header.PlayButton>Watch Now</Header.PlayButton>
           </Header.FeatureGroup>
         </Header.Feature>
-    </Header>
+    </BrowseHeader>
     <List.Group>
       {slideRows.map((slideItem) => (
         <List key={`${category}-${slideItem.title.toLowerCase()}`}>
