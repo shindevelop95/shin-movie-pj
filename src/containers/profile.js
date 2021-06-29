@@ -5,14 +5,11 @@ import * as ROUTES from '../constant/routes'
 
 export function SelectProfileContainer({ user, setProfile }) {
     return (
-        <>
+        <Header>
             <Header.Frame>
                 <Nav>
+                    <Footer.Logo src="/images/logo/logo.png" />
                     <Footer.WordLogo src="/images/logo/miryu.png" to={ROUTES.HOME} alt="Miryu" />
-                    <Nav.Inner>
-                        <Footer.Logo src="/images/logo/logo.png" />
-                        <Header.Button to={ROUTES.SIGN_IN} >Sign In</Header.Button>
-                    </Nav.Inner>
                 </Nav>
             </Header.Frame>
 
@@ -25,11 +22,11 @@ export function SelectProfileContainer({ user, setProfile }) {
                         displayName:user.displayName,
                         photoURL:user.photoURL
                     })}>
-                        <Profiles.Picture src={user.photoURL}/>
+                        <Profiles.Picture/>
                         <Profiles.Name>{user.displayName}</Profiles.Name>
                     </Profiles.User>
                 </Profiles.List>
             </Profiles>
-        </>
+        </Header>
     )
 }

@@ -12,48 +12,42 @@ export const Container = styled.div`
 export const Title = styled.h1`
   width: 100%;
   color: #fff;
-  font-size: 48px;
+  font-size: 50px;
   text-align: center;
   font-weight: 500;
 `;
 
 export const List = styled.ul`
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
+
 `;
 
 export const Name = styled.p`
-  color: #808080;
+  color: #e5e5e5;
   text-overflow: ellipsis;
-  font-size: 16px;
-  &:hover {
-    font-weight: bold;
-    color: #e5e5e5;
-  }
+  font-size: 40px;
+  text-transform: uppercase;
+  width:300px;
+  text-align:center;
+  margin:auto;
 `;
 
 export const Picture = styled.img`
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  border: 3px solid black;
-  cursor: pointer;
 `;
 
 export const Item = styled.li`
-  max-height: 200px;
-  max-width: 200px;
   list-style-type: none;
   text-align: center;
   margin-right: 30px;
+  transition:.5s;
   &:hover > ${Picture} {
     border: 3px solid white;
   }
   &:hover ${Name} {
     font-weight: bold;
     color: white;
+    background-color:red;
+    border-radius:10px;
+    padding:15px 0;
   }
   &:last-of-type {
     margin-right: 0;

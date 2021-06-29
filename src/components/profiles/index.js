@@ -18,7 +18,7 @@ Profiles.User = function ProfilesUser({children,...restProps}){
 }
 
 Profiles.Picture = function ProfilesPicture({src,...restProps}){
-    return <Picture {...restProps} src={src? `/images/users/${src}.png` :`/images/misc/phone.png`}/>
+    return <Picture {...restProps} src={src? `/images/users/${src}.png` :`/images/misc/tele.png`}/>
 }
 
 Profiles.Name = function ProfilesName({children,...restProps}){
