@@ -3,9 +3,7 @@ import styled from "styled-components/macro";
 export const Container = styled.div`
      margin:200px auto;
      width:85%;
-     @media(max-width:600px){
-       min-width:400px;
-    }
+    
 `;
 
 export const Group = styled.div`
@@ -18,14 +16,14 @@ export const Inner = styled.div``;
 export const Title = styled.h1`
     text-align: center;
     position:relative;
-    margin-bottom: 50px;
-    font-size:50px;
+    margin-bottom: 5rem;
+    font-size:5rem;
    
     
     &:after{
         content:"";
         position:absolute;
-        width:100px;
+        width:10rem;
         height:3px;
         background-color:#FFC404;
         bottom: -10px;
@@ -37,12 +35,12 @@ export const Title = styled.h1`
 export const Text = styled.span`
     display:flex;
     align-items: center;
-    font-size:25px;
+    font-size:2.5rem;
 
     .MuiSvgIcon-root{
         color:#FFC404;
-        width:50px;
-        height:50px;
+        width:5rem;
+        height:5rem;
         margin-right:10px;
     }
 
@@ -51,10 +49,10 @@ export const Text = styled.span`
 export const Wrapper = styled.div`
     display:flex;
     justify-content: space-evenly;
-    margin-bottom:180px;
+    margin-bottom:18rem;
 
-    @media (max-width: 600px){
+    @media (max-width: 900px){
         flex-direction:column;
-        align-items:center;
+        align-items:start;
     }
 `;

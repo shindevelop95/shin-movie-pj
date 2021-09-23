@@ -4,9 +4,6 @@ export const Container = styled.div`
     background-color: #000000;
     width:100%;
     padding:12.5rem 0;
-    @media(max-width:600px){
-        min-width:400px;
-    }
 `;
 
 export const OuterWrapper = styled.div`
@@ -16,6 +13,7 @@ export const OuterWrapper = styled.div`
 
 export const Wrapper = styled.div`
     display:flex;
+    flex-wrap:wrap;
     justify-content: space-between;
 
     @media (max-width:600px){

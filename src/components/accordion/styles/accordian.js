@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Item = styled.div`
     margin:0 auto 10px auto;
-    width:1200px;
+    width:80%;
     &::first-of-type{
         margin-top:3em;
     }
@@ -34,7 +34,7 @@ export const Header = styled.div`
     justify-content: space-between;
     cursor:pointer;
     margin-bottom:1px;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight:normal;
     background:#FFF0BD;
     padding:0.8em 1.2em;
@@ -53,9 +53,9 @@ export const Header = styled.div`
 
 export const Body = styled.div`
     color:#707070;
-    max-height:1200px;
+    max-height:120rem;
     transition:max-height 0.25s cubic-beizer(0.5,0,0.1,1);
-    font-size:25px;
+    font-size:2.5rem;
     font-weight:normal;
     line-height:normal;
     background:#FFF0BD;
@@ -74,16 +74,16 @@ export const Inner = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size:50px;
+    font-size:5rem;
     line-height:1.1.%;
-    margin-bottom:80px;
+    margin-bottom:8rem;
     text-align: center;
     position:relative;
 
     &:after{
         content:"";
         position:absolute;
-        width:100px;
+        width:10rem;
         height:3px;
         background-color:#FFC404;
         bottom: -10px;

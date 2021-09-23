@@ -1,42 +1,35 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-    width:1200px;
+    max-width:80%;
     margin:180px auto;
-
-    @media (max-width:600px){
-        width:400px;
-        display:flex;
-        flex-direction: column;
-    }
 `
 
+export const Group = styled.div`
+    width:80%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+`;
+
 export const Text = styled.h2`
-    font-size:25px;
+    font-size:2.5rem;
     text-align: center;
     font-weight: normal;
-
-    @media (max-width:600px){
-       font-size:20px;
-    }
 `
 
 export const Input = styled.input`
-    width:75%;
-    height:50px;
+    flex:1;
+    height:6rem;
     border: 2px solid #FFC404;
-    font-size:25px;
-    margin:30px 15px;
+    font-size:2.5rem;
     border-radius:10px;
+    margin-right:2rem;
     padding:5px 20px;
 
     &:focus{
         outline:none;
-    }
-
-    @media (max-width:600px){
-       width:300px;
-       margin:20px auto;
     }
     
 `
@@ -44,8 +37,8 @@ export const Input = styled.input`
 export const Button = styled.button`
     background-color:#FFC404;
     color:#eee;
-    font-size:25px;
-    padding:14px 30px;
+    font-size:2.5rem;
+    padding:1.2rem 3rem;
     border-radius:10px;
     border: 2px solid #FFC404;
     cursor: pointer;
@@ -53,9 +46,5 @@ export const Button = styled.button`
 
     &:hover{
         transform: scale(1.1);
-    }
-    @media (max-width:600px){
-        width:300px;
-       margin:0 auto;
     }
 `

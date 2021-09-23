@@ -1,18 +1,16 @@
 import styled from 'styled-components/macro'
 
 export const Background = styled.div`
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), url(../images/landing/land.jpg);
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55), rgba(0,0,0, 0.65)), url(../images/landing/land.jpg) no-repeat center;
     height:100vh;
-    width:100%;
-    margin-bottom:100px;
-    background-repeat: no-repeat;
-    background-size:100%;
+    background-size:cover;
 
     @media (max-width:700px){
-        height:300px;
+        max-height:280px;
         object-fit:contain;
         width:100%;
         margin-bottom:0;
+        background-size:cover;
 }
 `;
 
@@ -40,8 +38,6 @@ export const Container = styled.div`
     position:relative;
     width:85%;
     margin:0 auto;
-
-
 `;
 
 export const Group = styled.div`
@@ -55,8 +51,8 @@ export const Picture = styled.button`
     background:url(${({src}) => src});
     background-size:contain;
     border:0;
-    width:50px;
-    height:50px;
+    width:5rem;
+    height:5rem;
     cursor:pointer;
 `;
 
@@ -69,8 +65,8 @@ export const LinkGroup = styled.div`
 export const TextLink = styled.p`
     color:#eee;
     text-decoration:none;
-    margin-right:30px;
-    font-size:30px;
+    margin-right:3rem;
+    font-size:3rem;
     border-bottom:${({active}) => (active === 'true' ? '3px solid #FFC404':'none')};
     font-weight:${({active}) => (active === 'true' ? '700' : 'normal')};
     cursor:pointer;
@@ -119,7 +115,7 @@ export const Dropdown = styled.div`
 export const Profile = styled.div`
     display:flex;
     align-items:center;
-    margin-left:20px;
+    margin-left:2rem;
     position:relative;
 
     button{
@@ -133,26 +129,22 @@ export const Profile = styled.div`
 `
 export const InnerFrame = styled.div`
     position:sticky;
-    height:100px;
     background-color:${({show}) => (show  ? 'rgba(0,0,0,.7)' : 'transparent')};
     width:100%;
-    top:0%;
+    top:0;
     z-index:20000;
     padding:0 20px;
-
-    @media (max-width:700px){
-        display:none;
-    }
   `
 export const FrameGroup = styled.div`
+    padding:1rem 2rem;
     justify-content:space-between;
     align-items:center;
     display:flex;
 `;
 
 export const TextLogo = styled.img`
-    height:80px;
-    margin-right:50px;
+    height:15rem;
+    margin-right:5rem;
     object-fit:contain;
     @media (max-width:700px){
        display:none;
@@ -178,7 +170,11 @@ export const FeatureGroup = styled.div`
     top:25%;
     left:10%;
     @media (max-width:700px){
-        margin-top:0;
+        text-align:center;
+        top:initial;
+        max-width:initial;
+        left:50%;
+        transform:translateX(-50%);
     }
 `;
 
@@ -186,17 +182,12 @@ export const FeatureGroup = styled.div`
 
 export const FeatureCallOut = styled.h2`
     color:white;
-    font-size:50px;
+    font-size:5rem;
     line-height:normal;
     font-weight:bold;
     text-shadow:2px 2px 4px rgba(0,0,0,0.45);
     margin:0;
-    margin-bottom:20px;
-
-    @media (max-width:700px){
-        font-size:25px;
-        text-align:center;
-    }
+    margin-bottom:2rem;
 `;
 
 
@@ -204,49 +195,53 @@ export const Button = styled.button`
     background-color:transparent;
     color:#FFC404;
     padding:10px 20px;
-    font-size:25px;
+    font-size:3rem;
     border-radius:10px;
     border: 2px solid #FFC404;
     cursor: pointer;
     transition:.5s;
-
+    margin-top: ${({marginTop}) => marginTop? marginTop : '0'};
     &:hover{
         background-color:#FFC404;;
         color:#FFFFFF;
     }
-
-    @media (max-width:600px){
-        width:300px;
-       margin:0 auto;
-    }
+ 
+   
 `;
 
 export const PlayButton = styled(Button)`
-    width:200px;
-    margin-top:20px;
+    width:20rem;
+    font-size:2rem;
+    margin-top:2rem;
 
     @media (max-width:700px){
-        width:150px;
         margin:auto;
         display:block;
-        font-size:15px;
    }
 `
 
 export const SubText = styled.p`
     color:rgba(255,255,255,.75);
-    font-size:40px;
-    width:600px;
-    @media (max-width:700px){
-      display:none;
-}
+    font-size:4rem;
+    width:60rem;
+    @media (max-width:1000px){
+        font-size:6rem;
+    }
 `;
 
 export const TextGroup = styled.div`
-    margin-top:300px;
-    @media (max-width:700px){
+    margin-top:30rem;
+    @media (max-width:1300px){
+        margin-top:7rem;
+    }
+    @media (max-width:1000px){
+        margin-top:22rem;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
         text-align:center;
-        margin-top:100px;;
+     
 }
 `;
 
@@ -260,25 +255,28 @@ export const RightImg = styled.img`
     object-fit: contain;
     top:-15%;
     right:10%;
-    height:1000px;
+    height:100rem;
 
-    @media (max-width:700px){
-        display:none;
+    @media (max-width:1300px){
+        height:80rem;
+        top:-5%;
 }
+    @media (max-width:1100px){
+            height:70rem;
+            top:-1%;
+    }
+    @media (max-width:1000px){
+          display:none;
+    }
    
 `;
 
 export const Text = styled.p`
     color:white;
-    font-size:22px;
-    margin:30px 0;
+    font-size:2.2rem;
+    margin:3rem 0;
     line-height:normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.45);
-
-    @media (max-width:700px){
-        font-size:15px;
-        text-align:center;
-    }
 `
 
 export const Search = styled.div`
@@ -290,8 +288,8 @@ export const Search = styled.div`
         cursor:pointer;
         background-color: transparent;
         border:0;
-        width:50px;
-        height:50px;
+        width:5rem;
+        height:5rem;
         transition:.5s;
     }
 

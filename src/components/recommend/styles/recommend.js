@@ -7,14 +7,10 @@ export const Container = styled.div`
 export const Title = styled.div`
     background-color:black;
     color:#eee;
-    font-size:50px;
+    font-size:5rem;
     text-align:center;
     font-weight:500;
-    padding:50px 0;
-    @media (max-width:700px){
-       font-size:35px;
-    }
-    
+    padding:5rem 0;
 `;
 
 export const Header = styled.h1`
@@ -25,10 +21,10 @@ export const Header = styled.h1`
     margin:auto 0;
     color:#eee;
     text-align: center;
-    font-size:18px;
+    font-size:1.8rem;
     z-index:1500;
     @media (max-width:700px){
-       display:none;
+      font-size:1rem;
     }
 `;
 
@@ -36,8 +32,7 @@ export const Text = styled.p``;
 
 export const Frame = styled.div`
     position:relative;
-    height:400px;
-    width:300px;
+    width:30rem;
     margin-right:20px;
     transition:transform 450ms;
     &:hover{
@@ -49,23 +44,15 @@ export const Frame = styled.div`
             bottom:0%;
             left:5%;
             background-color:rgba(0,0,0,.8);
-            height:120px;
+            height:30%;
             width:90%;
-            z-index:999
-        }
-        @media (max-width:700px){
-            height:100px;
-            width:80px;
-            &:after{
-                background-color:transparent;
-            }
         }
 `;
 
 export const Image = styled.img`
         object-fit: contain;
-        width:300px;
-        max-height:400px;
+        width:30rem;
+        max-height:40rem;
         position:relative;
 
         @media (max-width:700px){
@@ -96,8 +83,8 @@ export const Button = styled.button`
     .MuiSvgIcon-root{
         color:red;
         cursor:pointer;
-        height:35px;
-        width:35px;
+        height:3.5rem;
+        width:3.5rem;
     }
 
     .MuiSvgIcon-root:hover{

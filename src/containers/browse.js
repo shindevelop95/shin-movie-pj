@@ -57,7 +57,6 @@ export function BrowseContainer({ slides }) {
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
     <BrowseHeader src="batman-landing">
-    
       <Header.InnerFrame show={show}>
         <Header.FrameGroup>
         <Header.LinkGroup>

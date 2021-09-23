@@ -17,8 +17,10 @@ export function FaqsContainer(){
                 <InputForm.Text>
                     Want to be kept updated for future update? Enter your email to create or restart your membership.
                 </InputForm.Text>
-                <InputForm.Input placeholder="Email Address"/>
-                <InputForm.Button>Subscribe</InputForm.Button>
+                <InputForm.Group>
+                    <InputForm.Input placeholder="Email Address"/>
+                    <InputForm.Button>Subscribe</InputForm.Button>
+                </InputForm.Group>
             </InputForm>
         </Accordion>
     )

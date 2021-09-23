@@ -1,9 +1,6 @@
 import styled, { keyframes } from 'styled-components/macro'
 
 export const Item = styled.div`
-    @media(max-width:600px){
-        min-width:400px;
-    }
 `
 
 export const Inner = styled.div`
@@ -17,13 +14,13 @@ export const Inner = styled.div`
 
     @media (max-width:1000px){
         flex-direction:column;
-        width:100%;
     }
 `;
 
 export const Container = styled.div`
     margin:100px 0;
     @media(max-width:1000px){
+        text-align: center;
         ${Item}:last-of-type h2 {
             margin-bottom:50px;
         }
@@ -32,19 +29,18 @@ export const Container = styled.div`
 
 export const Pane = styled.div`
     @media (max-width: 1000px){
-        width:100%;
         padding : 0 45px;
         text-align:center;
     }
 `;
 
 export const Title = styled.h1`
-    font-size:50px;
+    font-size:5rem;
     line-height:1.1.%;
     margin-bottom:8px;
     text-align:start;
-    width:600px;
-    margin-left:120px;
+    width:60rem;
+    margin-left:12rem;
     position:relative;
 
     &:after{
@@ -56,14 +52,11 @@ export const Title = styled.h1`
         width:100px;
         background-color: #FFC404;
     }
-    @media (max-width: 600px){
-        font-size:35px;
+    @media (max-width: 1000px){
+        margin-left: initial;
+        width:initial;
+        margin-bottom: 2rem;
         text-align:center;
-        margin:auto;
-        margin-bottom:40px;
-        margin-top: 40px;
-        width:300px;
-
         &:after{
         content:'';
         position: absolute;
@@ -79,19 +72,16 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
     color:rgba(0,0,0,.65);
-    font-size:25px;
+    font-size:2.5rem;
     font-weight:normal;
     line-height:1.5;
-    width:600px;
+    width:55rem;
     text-align: start;
-    margin-left:120px;
-
-    @media (max-width:600px){
-        font-size:14px;
+    margin-left:12rem;
+    @media (max-width: 1000px){
+        width:initial;
+        margin-left:initial;
         text-align:center;
-        margin:auto;
-        margin-bottom:40px;
-        width:300px;
     }
 `;
 
@@ -105,10 +95,10 @@ const fadeIn = keyframes`
 
 export const Image = styled.img`
     object-fit: contain;
-    height:500px;
+    height:50rem;
     animation: 1s ${fadeIn} ease-in;
 
-    @media (max-width:600px){
-       height:300px;
+    @media (max-width:1300px){
+       height:40rem;
     }
 `;
