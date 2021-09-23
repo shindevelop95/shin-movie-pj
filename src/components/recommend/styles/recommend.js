@@ -79,17 +79,9 @@ export const Group = styled.div`
     overflow-x: scroll;
     margin:0 auto;
     display:flex;
-    padding:20px;
-
     cursor:pointer;
- 
-   
     &::-webkit-scrollbar{
         display:none;
-    }
-    @media (max-width:700px){
-       
-
     }
 `;
 

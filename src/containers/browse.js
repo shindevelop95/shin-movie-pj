@@ -57,7 +57,7 @@ export function BrowseContainer({ slides }) {
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
     <BrowseHeader src="batman-landing">
-      <Header.Filter/>
+    
       <Header.InnerFrame show={show}>
         <Header.FrameGroup>
         <Header.LinkGroup>
@@ -76,32 +76,30 @@ export function BrowseContainer({ slides }) {
          <Header.Profile>
            <Header.Picture src={1}/>
            <Header.Dropdown>
-             <Header.LinkGroup>
                <Header.Picture src={1}/>
                <Header.TextLink>{user.displayName}</Header.TextLink>
-             </Header.LinkGroup>
-             <Header.LinkGroup>
                <Header.TextLink onClick={() => firebase.auth().signOut()}>
                  Sign Out
                </Header.TextLink>
-             </Header.LinkGroup>
            </Header.Dropdown>
          </Header.Profile>
        </Header.LinkGroup>
         </Header.FrameGroup>
       </Header.InnerFrame>
-        <Header.Feature>
-          <Header.FeatureGroup>
-          <Header.FeatureCallOut>The Dark Knight</Header.FeatureCallOut>
-          <Header.Text>
-            Forever alone in a crowd, failed comedian Arther Fleck seeks conncection as he walks the streets of Gotham City. Arther wears two mask 
-            -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the wolrd around him. 
-          </Header.Text>
-          <Header.PlayButton>Watch Now</Header.PlayButton>
-          </Header.FeatureGroup>
-        </Header.Feature>
+      
+      <Header.FeatureGroup>
+        <Header.FeatureCallOut>The Dark Knight</Header.FeatureCallOut>
+        <Header.Text>
+          Forever alone in a crowd, failed comedian Arther Fleck seeks conncection as he walks the streets of Gotham City. Arther wears two mask 
+          -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the wolrd around him. 
+        </Header.Text>
+        <Header.PlayButton>Watch Now</Header.PlayButton>
+      </Header.FeatureGroup>
+      <Header.Filter/>
     </BrowseHeader>
+   
     <List.Group>
+   
       {slideRows.map((slideItem) => (
         <List key={`${category}-${slideItem.title.toLowerCase()}`}>
           <List.Title>{slideItem.title}</List.Title>

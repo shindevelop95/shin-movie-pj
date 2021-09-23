@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 export const Container = styled.div`
     background-color: #000000;
     width:100%;
-    padding:125px 0;
+    padding:12.5rem 0;
     @media(max-width:600px){
         min-width:400px;
     }
@@ -40,29 +40,29 @@ export const InnerGroup = styled.div`
 
 export const Info = styled.span`
     color:#FFF0BD;
-    margin-left:20px;
+    margin-left:2rem;
     line-height:1.5;
-    font-size:20px;
+    font-size:2.5rem;
 `;
 
 export const Text = styled.p`
     color:#FFF0BD;
-    font-size:25px;
+    font-size:2rem;
 `;
 
 export const LogoGroup = styled.div`
     display:flex;
     align-items:center;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 
 `;
 
 export const Logo = styled.img`
-    height:70px;
-    width:70px;
-    margin-right:20px;
+    height:7rem;;
+    width:7rem;
+    margin-right:2rem;
 `;
 
 export const WordLogo = styled.img`
-    height:80px;
+    height:8rem;
 `;

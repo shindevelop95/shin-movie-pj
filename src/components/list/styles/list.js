@@ -14,7 +14,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  margin-left:100px;
   
   > ${Title} {
     @media (max-width: 1000px) {
@@ -31,14 +30,18 @@ export const Container = styled.div`
 `;
 
 export const Group = styled.div`
-  background-color:black ;
-  flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
-  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
+display:flex;
+background-color:black ;
+
+flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
+justify-content: center;
+align-items:center;
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
-      margin-top: -180px;
+     
       background-color: black;
       z-index: 3000;
+    
     }
   }
   @media (max-width:700px){

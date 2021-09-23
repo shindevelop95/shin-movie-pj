@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Frame = styled.div`
     img{
-        height:300px;
+        width:100%;
     }
     @media (max-width:700px){
         img{
@@ -19,7 +19,7 @@ export const Frame = styled.div`
 
 export const Title = styled.h2`
     color:#eee;
-    font-size:40px;
+    font-size:4rem;
     @media (max-width:700px){
        font-size:35px;
        text-align: center;

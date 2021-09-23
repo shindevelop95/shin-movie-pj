@@ -7,7 +7,7 @@ export const Background = styled.div`
     margin-bottom:100px;
     background-repeat: no-repeat;
     background-size:100%;
-    
+
     @media (max-width:700px){
         height:300px;
         object-fit:contain;
@@ -24,13 +24,13 @@ export const Filter = styled.span`
     rgba(37, 37, 37, 0.80),
     black
   );
-    height:20rem;
+    height:30rem;
     width:100%;
-    bottom:0;
-    @media (max-width:700px){
+    z-index:20;
+    bottom:0rem;
+    @media (max-width:1100px){
        display:none;
 }
-
 `;
 
 
@@ -40,6 +40,8 @@ export const Container = styled.div`
     position:relative;
     width:85%;
     margin:0 auto;
+
+
 `;
 
 export const Group = styled.div`
@@ -129,26 +131,23 @@ export const Profile = styled.div`
         flex-direction:column;
     }
 `
-export const InnerFrame = styled(Container)`
-    position:fixed;
+export const InnerFrame = styled.div`
+    position:sticky;
     height:100px;
     background-color:${({show}) => (show  ? 'rgba(0,0,0,.7)' : 'transparent')};
     width:100%;
     top:0%;
     z-index:20000;
     padding:0 20px;
+
     @media (max-width:700px){
         display:none;
     }
   `
 export const FrameGroup = styled.div`
-    flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    width:90%;
     display:flex;
-    margin:0 auto;
-    
 `;
 
 export const TextLogo = styled.img`
@@ -160,8 +159,8 @@ export const TextLogo = styled.img`
 }
 `;
 
-export const Feature = styled(Container)`
-    padding:150px 0 500px 0;
+export const Feature = styled.div`
+   /* padding:150px 0 500px 0;
     flex-direction:column;
     width:40%;
     margin-left:7.7%;
@@ -170,11 +169,14 @@ export const Feature = styled(Container)`
         margin:auto;
         padding:initial;
         width:80%;
-   }
+   }*/
 `;
 
 export const FeatureGroup = styled.div`
-    margin-top:200px;
+    position:absolute;
+    max-width:45%;
+    top:25%;
+    left:10%;
     @media (max-width:700px){
         margin-top:0;
     }
