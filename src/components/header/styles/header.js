@@ -5,8 +5,8 @@ export const Background = styled.div`
     height:100vh;
     background-size:cover;
 
-    @media (max-width:700px){
-        max-height:280px;
+    @media (max-width:1000px){
+        max-height:48rem;
         object-fit:contain;
         width:100%;
         margin-bottom:0;
@@ -143,10 +143,10 @@ export const FrameGroup = styled.div`
 `;
 
 export const TextLogo = styled.img`
-    height:15rem;
+    height:8rem;
     margin-right:5rem;
     object-fit:contain;
-    @media (max-width:700px){
+    @media (max-width:1000px){
        display:none;
 }
 `;
@@ -169,7 +169,7 @@ export const FeatureGroup = styled.div`
     max-width:45%;
     top:25%;
     left:10%;
-    @media (max-width:700px){
+    @media (max-width:1000px){
         text-align:center;
         top:initial;
         max-width:initial;
@@ -182,12 +182,15 @@ export const FeatureGroup = styled.div`
 
 export const FeatureCallOut = styled.h2`
     color:white;
-    font-size:5rem;
+    font-size:6rem;
     line-height:normal;
     font-weight:bold;
     text-shadow:2px 2px 4px rgba(0,0,0,0.45);
     margin:0;
     margin-bottom:2rem;
+    @media (max-width:1300px){
+       font-size:4rem
+    }
 `;
 
 
@@ -210,9 +213,14 @@ export const Button = styled.button`
 `;
 
 export const PlayButton = styled(Button)`
-    width:20rem;
-    font-size:2rem;
+    width:30rem;
+    font-size:3rem;
     margin-top:2rem;
+
+    @media (max-width:1300px){
+        width:20rem;
+        font-size:2rem;
+    }
 
     @media (max-width:700px){
         margin:auto;
@@ -224,9 +232,6 @@ export const SubText = styled.p`
     color:rgba(255,255,255,.75);
     font-size:4rem;
     width:60rem;
-    @media (max-width:1000px){
-        font-size:6rem;
-    }
 `;
 
 export const TextGroup = styled.div`
@@ -235,7 +240,7 @@ export const TextGroup = styled.div`
         margin-top:7rem;
     }
     @media (max-width:1000px){
-        margin-top:22rem;
+        margin-top:5rem;
         display:flex;
         flex-direction: column;
         align-items:center;
@@ -273,10 +278,13 @@ export const RightImg = styled.img`
 
 export const Text = styled.p`
     color:white;
-    font-size:2.2rem;
+    font-size:3.2rem;
     margin:3rem 0;
     line-height:normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.45);
+    @media (max-width:1300px){
+       font-size:2rem
+    }
 `
 
 export const Search = styled.div`

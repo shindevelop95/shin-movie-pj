@@ -3,8 +3,8 @@ export const Background = styled.div`
     background: url(../images/misc/batman-landing.jpg) no-repeat center;                        
     height:100vh;
     background-size:cover;
-    @media (max-width:700px){
-        max-height:280px;
+    @media (max-width:1000px){
+        max-height:48rem;
         object-fit:contain;
         width:100%;
         margin-bottom:0;

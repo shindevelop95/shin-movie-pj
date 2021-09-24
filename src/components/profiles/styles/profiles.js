@@ -29,16 +29,22 @@ export const Name = styled.p`
   width:300px;
   text-align:center;
   margin:auto;
+  transition: all .5s;
+  opacity:0;
 `;
 
 export const Picture = styled.img`
+  height:30rem;
+  object-fit: contain;
+  cursor:pointer;
+  transition: all .5s;
 `;
 
 export const Item = styled.li`
   list-style-type: none;
   text-align: center;
   margin-right: 30px;
-  transition:.5s;
+
   &:hover > ${Picture} {
     border: 3px solid white;
   }
@@ -48,6 +54,7 @@ export const Item = styled.li`
     background-color:red;
     border-radius:10px;
     padding:15px 0;
+    opacity:1;
   }
   &:last-of-type {
     margin-right: 0;
