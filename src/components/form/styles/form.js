@@ -32,7 +32,7 @@ export const Base = styled.form`
 
 export const Title = styled.h1`
     color:#FFC404;
-    font-size:3.2rem;
+    font-size:3rem;
     font-weight:bold;
     margin-bottom:2.8rem;
     text-align: center;
@@ -66,12 +66,12 @@ export const Input = styled.input`
     border-radius:4px;
     border:0;
     color:white;
-    height:50px;
+    height:4rem;
     padding:.5rem 2rem;
     margin-bottom:2rem;
     font-size:2rem!important;
     ::-webkit-input-placeholder{
-        font-size:2rem;
+        font-size:1.8rem;
     }
 
     &:last-of-type{
@@ -83,7 +83,7 @@ export const Submit = styled.button`
     background-color:transparent;
     color:#FFC404;
     padding:1rem 2rem;
-    font-size:2.5rem;
+    font-size:2rem;
     border-radius:10px;
     border: 2px solid #FFC404;
     cursor: pointer;
