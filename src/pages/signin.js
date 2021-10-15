@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom';
-import { NavContainer, HeaderContainer } from '../containers'
-import { Header, Nav, Form } from '../components'
+import { NavContainer} from '../containers'
+import { Header, Form } from '../components'
 import { FirebaseContext } from '../context/firebase';
-import * as  ROUTES from '../constant/routes';
 
 export default function SignIn() {
     const history = useHistory();
@@ -35,33 +34,33 @@ export default function SignIn() {
             <Header.Frame>
                 <NavContainer />
                 <Form>
-          <Form.Title>Sign In</Form.Title>
-          {error && <Form.Error data-testid="error">{error}</Form.Error>}
+                  <Form.Title>Sign In</Form.Title>
+                  {error && <Form.Error data-testid="error">{error}</Form.Error>}
 
-          <Form.Base onSubmit={handleSignin} method="POST">
-            <Form.Input
-              placeholder="Email address"
-              value={emailAddress}
-              onChange={({ target }) => setEmailAddress(target.value)}
-            />
-            <Form.Input
-              type="password"
-              value={password}
-              autoComplete="off"
-              placeholder="Password"
-              onChange={({ target }) => setPassword(target.value)}
-            />
-            <Form.Submit disabled={isInvalid} type="submit" data-testid="sign-in">
-              Sign In
-            </Form.Submit>
-          </Form.Base>
+                  <Form.Base onSubmit={handleSignin} method="POST">
+                    <Form.Input
+                      placeholder="Email address"
+                      value={emailAddress}
+                      onChange={({ target }) => setEmailAddress(target.value)}
+                    />
+                    <Form.Input
+                      type="password"
+                      value={password}
+                      autoComplete="off"
+                      placeholder="Password"
+                      onChange={({ target }) => setPassword(target.value)}
+                    />
+                    <Form.Submit disabled={isInvalid} type="submit" data-testid="sign-in">
+                      Sign In
+                    </Form.Submit>
+                  </Form.Base>
 
-          <Form.Text>
-            New to Miryu? <Form.Link to="/signup">Sign up now.</Form.Link>
-          </Form.Text>
-          <Form.TextSmall>
-            This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
-          </Form.TextSmall>
+                  <Form.Text>
+                    New to Miryu? <Form.Link to="/signup">Sign up now.</Form.Link>
+                  </Form.Text>
+                  <Form.TextSmall>
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+                  </Form.TextSmall>
         </Form>
             </Header.Frame>
         </Header>

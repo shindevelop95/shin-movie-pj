@@ -6,11 +6,7 @@ export const Background = styled.div`
     background-size:cover;
 
     @media (max-width:1000px){
-        max-height:48rem;
-        object-fit:contain;
-        width:100%;
-        margin-bottom:0;
-        background-size:cover;
+     
 }
 `;
 
@@ -234,22 +230,27 @@ export const SubText = styled.p`
     width:60rem;
 `;
 
+
+
 export const TextGroup = styled.div`
     margin-top:30rem;
     @media (max-width:1300px){
         margin-top:7rem;
     }
     @media (max-width:1000px){
-        margin-top:5rem;
-        display:flex;
-        flex-direction: column;
-        align-items:center;
-        justify-content:center;
         text-align:center;
-     
 }
 `;
 
+export const TextGroupFrame = styled.div`
+    display:flex;
+    flex-direction:column;
+     @media (max-width:1000px){
+       justify-content:center;
+       align-items:center;
+       transform:translateY(50%);
+}
+`;
 export const InnerGroup = styled.div`
     display:flex;
     align-items: center;

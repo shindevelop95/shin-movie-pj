@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link as ReachRouterLink} from 'react-router-dom'  
 import SearchIcon from '@material-ui/icons/Search';
-import { Background, FrameGroup, FeatureGroup,Filter, InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
+import { Background, TextGroupFrame,FrameGroup, FeatureGroup,Filter, InnerFrame,RightImg,Dropdown, Picture, PlayButton,TextLink,FeatureCallOut, LinkGroup, SubText,Container, Profile, TextGroup, InnerGroup, Group, Text, TextLogo, Button, Feature, Search, SearchInput} from './styles/header';
 
 export default function Header({bg = true, children, ...restProps}){
     return bg ? (
@@ -82,6 +82,10 @@ Header.SubText = function HeaderSubText({children,...restProps}){
 
 Header.TextGroup = function HeaderTextGroup({children,...restProps}){
     return <TextGroup {...restProps}>{children}</TextGroup>
+}
+
+Header.TextGroupFrame = function HeaderTextGroupFrame({children,...restProps}){
+    return <TextGroupFrame {...restProps}>{children}</TextGroupFrame>
 }
 
 Header.InnerGroup = function HeaderInnerGroup({children,...restProps}){

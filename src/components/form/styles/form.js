@@ -10,6 +10,7 @@ export const Container = styled.div`
     margin:auto;
     max-width:40%;
     padding:6.5rem 4rem;
+    height:100%;
   
 
 `;
@@ -27,7 +28,6 @@ export const Base = styled.form`
     display:flex;
     flex-direction:column;
    
-    width:100%;
 `;
 
 export const Title = styled.h1`
@@ -66,6 +66,7 @@ export const Input = styled.input`
     border-radius:4px;
     border:0;
     color:white;
+    width:100%;
     height:4rem;
     padding:.5rem 2rem;
     margin-bottom:2rem;
@@ -89,16 +90,13 @@ export const Submit = styled.button`
     cursor: pointer;
     transition:.5s;
     margin-bottom:2rem;
+    width:100%;
 
     &:hover{
         background-color:#FFC404;;
         color:#FFFFFF;
     }
 
-    @media (max-width:600px){
-        width:300px;
-       margin:0 auto;
-    }
     &:disabled{
         opacity:0.5s;
     }
