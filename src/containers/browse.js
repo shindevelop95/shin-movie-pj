@@ -60,7 +60,7 @@ export function BrowseContainer({ slides }) {
       <Header.InnerFrame show={show}>
         <Header.FrameGroup>
         <Header.LinkGroup>
-          <Header.TextLogo to={ROUTES.HOME} src="/images/logo/miryu.png" />
+          <Header.TextLogo height={"7rem"} to={ROUTES.HOME} src="/images/logo/miryu.png" />
           <Header.TextLink
             active={category ==='series' ? 'true' : 'false'}
             onClick={() =>setCategory('series')}

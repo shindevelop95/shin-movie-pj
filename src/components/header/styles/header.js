@@ -139,13 +139,14 @@ export const FrameGroup = styled.div`
 `;
 
 export const TextLogo = styled.img`
-    height:8rem;
+    height:${({height}) => height ? height : '12rem'};
     margin-right:5rem;
     object-fit:contain;
     @media (max-width:1000px){
        display:none;
 }
 `;
+
 
 export const Feature = styled.div`
    /* padding:150px 0 500px 0;
@@ -226,7 +227,7 @@ export const PlayButton = styled(Button)`
 
 export const SubText = styled.p`
     color:rgba(255,255,255,.75);
-    font-size:4rem;
+    font-size:3.5rem;
     width:60rem;
 `;
 

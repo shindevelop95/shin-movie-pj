@@ -50,19 +50,21 @@ export default function Signup() {
                         <Form.Input
                             placeholder="First Name"
                             value={firstName}
+                            autoComplete="new-password"
                             onChange={({ target }) => setFirstName(target.value)}
 
                         />
                         <Form.Input
                             placeholder="Email Address"
                             value={emailAddress}
+                            autoComplete="new-password"
                             onChange={({ target }) => setEmailAddress(target.value)}
 
                         />
                         <Form.Input
                             placeholder="Password"
-                            autoComplete="off"
                             type="password"
+                            autoComplete="new-password"
                             value={password}
                             onChange={({ target }) => setPassword(target.value)}
 
